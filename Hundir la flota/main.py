@@ -11,7 +11,7 @@ while True:
 
     print("TU TABLERO:")
     print(usuario)
-    print("TABLERO DE LA CPU (sin barcos):")
+    print("TABLERO ENEMIGO:")
     print(vista_cpu)
 
     turno_usuario(cpu)
