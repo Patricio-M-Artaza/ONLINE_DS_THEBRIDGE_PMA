@@ -135,6 +135,12 @@ def quedan_barcos(tablero):
 
     return barcos_restantes
 
+def ocultar_barcos(tablero):
+    vista = tablero.copy()
+    vista[vista == "O"] = "_"
+    return vista
+
+
 
 
 
