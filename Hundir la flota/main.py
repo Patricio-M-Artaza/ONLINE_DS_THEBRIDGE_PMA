@@ -11,7 +11,7 @@ cpu = colocar_barcos(cpu)
 
 while True:
     vista_cpu = ocultar_barcos(cpu)
-
+    print("*"*40)
     print("TU TABLERO:")
     print(usuario)
     print("TABLERO ENEMIGO:")

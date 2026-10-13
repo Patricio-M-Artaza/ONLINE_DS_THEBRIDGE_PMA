@@ -17,13 +17,13 @@ def coloca_barco_plus(tablero, barco):
         fila = pieza[0]
         columna = pieza[1]
         if fila < 0 or fila >= num_max_filas:
-            print(f"No puedo poner la pieza {pieza} porque se sale del tablero")
+            # print(f"No puedo poner la pieza {pieza} porque se sale del tablero") --> Comentado para ver si el juego se ve mas limpio.
             return False
         if columna < 0 or columna >= num_max_columnas:
-            print(f"No puedo poner la pieza {pieza} porque se sale del tablero")
+            # print(f"No puedo poner la pieza {pieza} porque se sale del tablero")--> Comentado para ver si el juego se ve mas limpio.
             return False
         if tablero[pieza] == "O" or tablero[pieza] == "X":
-            print(f"No puedo poner la pieza {pieza} porque hay otro barco")
+            # print(f"No puedo poner la pieza {pieza} porque hay otro barco")--> Comentado para ver si el juego se ve mas limpio.
             return False
         tablero_temp[pieza] = "O"
     return tablero_temp
@@ -51,10 +51,10 @@ def crea_barco_aleatorio(tablero, eslora=4, num_intentos=100):
         barco = []
         # Construimos el hipotético barco
         pieza_original = (random.randint(0, num_max_filas - 1), random.randint(0, num_max_columnas - 1))
-        print("Pieza original:", pieza_original)
+        # print("Pieza original:", pieza_original) --> Comentado para ver si el juego se ve mas limpio.
         barco.append(pieza_original)
         orientacion = random.choice(["N", "S", "O", "E"])
-        print("Con orientacion", orientacion)
+        # print("Con orientacion", orientacion) --> Comentado para ver si el juego se ve mas limpio.
         fila = pieza_original[0]
         columna = pieza_original[1]
         for i in range(eslora - 1):
@@ -71,7 +71,7 @@ def crea_barco_aleatorio(tablero, eslora=4, num_intentos=100):
         tablero_temp = coloca_barco_plus(tablero, barco)
         if type(tablero_temp) == np.ndarray:
             return tablero_temp
-        print("Tengo que intentar colocar otro barco")
+        # print("Tengo que intentar colocar otro barco") --> Comentado para ver si el juego se ve mas limpio.
 # Los barcos se ubican de manera aleatorio en el tablero, se van asignando a la lista vacia creada y si hay un barco ya creado prueba con otro. Es un barco a la vez.
 # Si el barco no entra vuelve a sortear una casilla nueva y una orientacion.
 # Devuele un tablero nuevo con el barco puesto. 
