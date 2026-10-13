@@ -12,7 +12,7 @@ ronda = 0
 while True:
     vista_cpu = ocultar_barcos(cpu)
     ronda += 1
-    print(f" RONDA {ronda}".center(20, "-"))
+    print(f" RONDA {ronda} ".center(40, "-"))
     print("TU TABLERO:")
     print(usuario)
     print("TABLERO ENEMIGO:")
