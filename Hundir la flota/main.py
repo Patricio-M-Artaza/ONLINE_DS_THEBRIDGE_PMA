@@ -8,10 +8,11 @@ cpu = crea_tablero(10)
 usuario = colocar_barcos(usuario)
 cpu = colocar_barcos(cpu)
 # Colocamos los barcos de usuario y de CPU.
-
+ronda = 0
 while True:
     vista_cpu = ocultar_barcos(cpu)
-    print("*"*40)
+    ronda += 1
+    print(f" RONDA {ronda}".center(20, "-"))
     print("TU TABLERO:")
     print(usuario)
     print("TABLERO ENEMIGO:")
